@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<title>ABBAS00H9 | PS4 WebKit</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#080d18;color:#eef5ff;
+ font-family:Arial,sans-serif;text-align:center;
+}
+header{padding:28px 12px 20px;background:#101b30;
+ border-bottom:2px solid #168bff}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px}
+.logo span{color:#168bff}
+p{color:#a9bad2}
+main{max-width:520px;margin:25px auto;padding:0 16px}
+.panel{background:#101b30;border:1px solid #233a59;
+ border-radius:14px;padding:20px;margin-bottom:17px}
+h2{font-size:19px;margin-top:0}
+select,button{
+ width:100%;padding:14px;margin-top:10px;
+ border-radius:9px;font-size:15px;font-weight:bold;
+}
+select{background:#080d18;color:white;border:1px solid #365474}
+button{background:#087cf0;color:white;border:0}
+button:active{opacity:.8}
+.note{font-size:12px;line-height:1.7}
+.status{color:#65d9a4;font-size:13px}
+footer{padding:20px;color:#778ba7;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">ABBAS<span>00H9</span></div>
+ <p>PLAYSTATION 4 WEBKIT</p>
+</header>
+<main>
+ <section class="panel">
+  <h2>Welcome to PS4 WebKit</h2>
+  <p>Custom interface by ABBAS00H9</p>
+  <div class="status">● Website interface is online</div>
+ </section>
+ <section class="panel">
+  <h2>System Firmware</h2>
+  <select id="firmware">
+   <option value="">Select your PS4 firmware</option>
+   <option>9.00</option>
+   <option>9.03</option>
+   <option>9.04</option>
+   <option>9.50</option>
+   <option>9.51</option>
+   <option>9.60</option>
+   <option>10.00</option>
+   <option>10.01</option>
+   <option>10.50</option>
+   <option>10.70</option>
+   <option>11.00</option>
+   <option>11.02</option>
+   <option>11.50</option>
+   <option>11.52</option>
+   <option>12.00</option>
+   <option>12.02</option>
+   <option>12.50</option>
+   <option>12.52</option>
+   <option>13.00</option>
+   <option>13.02</option>
+  </select>
+  <button onclick="showFirmware()">Check Selected Firmware</button>
+  <p id="result" class="note">Select a firmware version above.</p>
+ </section>
+ <section class="panel">
+  <h2>GoldHEN</h2>
+  <p class="note">Exploit files and firmware compatibility have not been configured yet.</p>
+  <button onclick="alert('No exploit payload is configured yet.')">
+   GoldHEN — Not Configured
+  </button>
+ </section>
+ <section class="panel">
+  <h2>Important Notice</h2>
+  <p class="note">This page is an interface only. Selecting a firmware does not verify compatibility or run an exploit. Use trusted files specifically verified for your console firmware.</p>
+ </section>
+</main>
+<footer>ABBAS00H9 PS4 WebKit · Custom Project</footer>
+<script>
+function showFirmware(){
+ const fw=document.getElementById('firmware').value;
+ document.getElementById('result').textContent=fw
+ ? 'Selected firmware: '+fw+' — compatibility not yet verified.'
+ : 'Please select a firmware version first.';
+}
+</script>
+</body>
+</html>
